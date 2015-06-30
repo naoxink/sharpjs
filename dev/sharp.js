@@ -9,7 +9,7 @@
     var today = function(glue){
         glue = glue || "-"
         var date = new Date()
-        return date.getDate() + glue + (date.getMonth()+1) + glue + date.getFullYear()
+        return (date.getDate() < 10 ? '0' : '') + date.getDate() + glue + (date.getMonth() < 10 ? '0' : '') + (date.getMonth()+1) + glue + date.getFullYear()
     }
 
     var random = function(min, max){
