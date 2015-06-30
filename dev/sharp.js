@@ -1,7 +1,9 @@
 ;(sharp = function(){
 
-    var microtime = function(){
-        return new Date().getTime()
+    var microtime = function(getFloat){
+        var now = new Date().getTime() / 1000;
+        var s = parseInt(now, 10);
+        return (getFloat) ? now : (Math.round((now - s) * 1000) / 1000) + ' ' + s;
     }
 
     var today = function(glue){
