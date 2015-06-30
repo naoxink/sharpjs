@@ -35,11 +35,15 @@
     var isObject = function(_var){
         if (Object.prototype.toString.call(_var) === '[object Array]')
             return false
-        return _var !== null && typeof _var === 'object';
+        return (_var !== null && typeof _var === 'object')
     }
 
     var isNull = function(_var){
         return (_var === null)
+    }
+
+    var escape = function(_var){
+        return (_var + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0')
     }
 
     return {
@@ -51,7 +55,8 @@
         isBoolean: isBoolean,
         isString: isString,
         isObject: isObject,
-        isNull: isNull
+        isNull: isNull,
+        escape: escape
     }
 
 }());
