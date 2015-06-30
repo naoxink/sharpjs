@@ -24,12 +24,34 @@
         return haystack.indexOf(needle) !== -1 ? true : false
     }
 
+    var isBoolean = function(_var){
+        return (_var === true || _var === false)
+    }
+
+    var isString = function(_var){
+        return (typeof _var === 'string')
+    }
+
+    var isObject = function(_var){
+        if (Object.prototype.toString.call(_var) === '[object Array]')
+            return false
+        return _var !== null && typeof _var === 'object';
+    }
+
+    var isNull = function(_var){
+        return (_var === null)
+    }
+
     return {
         microtime: microtime,
         today: today,
         random: random,
         trim: trim,
-        inArray: inArray
+        inArray: inArray,
+        isBoolean: isBoolean,
+        isString: isString,
+        isObject: isObject,
+        isNull: isNull
     }
 
 }());
