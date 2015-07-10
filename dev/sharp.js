@@ -47,7 +47,7 @@
     }
     
     var stripTags = function(_var, _allowed){
-        allowed = (((allowed || '') + '')
+        _allowed = (((_allowed || '') + '')
 		.toLowerCase()
 		.match(/<[a-z][a-z0-9]*>/g) || [])
 		.join('')
@@ -56,7 +56,7 @@
 	return _var
 		.replace(commentsAndPhpTags, '')
 		.replace(tags, function($0, $1) {
-			return allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : ''
+			return _allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : ''
 	    	})
     }
 
