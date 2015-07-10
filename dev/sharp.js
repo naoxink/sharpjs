@@ -45,6 +45,20 @@
     var escape = function(_var){
         return (_var + '').replace(/[\\"']/g, '\\$&').replace(/\u0000/g, '\\0')
     }
+    
+    var stripTags = function(_var, _allowed){
+        allowed = (((allowed || '') + '')
+			.toLowerCase()
+			.match(/<[a-z][a-z0-9]*>/g) || [])
+			.join('')
+		var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi
+		var commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi
+	  	return _var
+	  		.replace(commentsAndPhpTags, '')
+	  		.replace(tags, function($0, $1) {
+	      return allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : ''
+	    })
+    }
 
     return {
         microtime: microtime,
@@ -56,7 +70,8 @@
         isString: isString,
         isObject: isObject,
         isNull: isNull,
-        escape: escape
+        escape: escape,
+        stripTags: stripTags
     }
 
 }());
