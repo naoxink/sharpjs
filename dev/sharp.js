@@ -98,14 +98,14 @@
   this.merge = function(_obj1, _obj2){
     var res = {};
     for (var attrname in _obj1) {
-      if(_obj1[attrname].constructor === Object){
+      if(this.isObject(_obj1[attrname])){
         res[attrname] = this.merge(_obj1[attrname], _obj2[attrname])
       }else{
         res[attrname] = _obj1[attrname];
       }
     }
     for (var attrname in _obj2) {
-      if(_obj2[attrname].constructor === Object){
+      if(this.isObject(_obj2[attrname])){
         res[attrname] = merge(_obj1[attrname], _obj2[attrname])
       }else{
         res[attrname] = _obj2[attrname];
