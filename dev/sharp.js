@@ -183,5 +183,32 @@
             break;
     }
   } // End this.fade
+  
+  this.map = function(array, iteratee){
+    var n = array.length || 0;
+    var i = 0;
+    var results = [];
+    for(i = 0; i < n; i++){
+        var res = iteratee.call(3, array[i], i, array);
+        results.push(res);
+    }
+    return results;
+  } // End this.map
+  
+  this.select = function(selector){
+    var sel_type = selector.substr(0, 1);
+    var sel = selector.substr(1, selector.length);
+    switch(sel_type){
+        case '.':
+            return document.getElementsByClassName(sel);
+            break;
+        case '#':
+            return document.getElementById(sel);
+            break;
+        default:
+            return null;
+            break;
+    }
+  } // End this.select
 
 }());
