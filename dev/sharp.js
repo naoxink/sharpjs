@@ -113,5 +113,12 @@
     }
     return res;
   }
+  
+  this.escapeHTML = function(_text) {  
+    var replacements = {"<": "&lt;", ">": "&gt;","&": "&amp;", """: "&quot;"};
+    return _text.replace(/[<>&"]/g, function(character) {
+      return replacements[character];
+    }); 
+  }
 
 }());
