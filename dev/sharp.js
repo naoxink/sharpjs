@@ -92,7 +92,7 @@
   } // End this.dump
 
   this.functionExists = function(_functionName) {
-    return (typeof window[_functionName] === 'function'))
+    return (typeof window[_functionName] === 'function')
   } // End this.functionExists
 
   this.merge = function(_obj1, _obj2){
@@ -115,7 +115,7 @@
   } // End this.merge
   
   this.escapeHTML = function(_text) {  
-    var replacements = {"<": "&lt;", ">": "&gt;","&": "&amp;", """: "&quot;"};
+    var replacements = {"<": "&lt;", ">": "&gt;","&": "&amp;", "": "&quot;"};
     return _text.replace(/[<>&"]/g, function(character) {
       return replacements[character];
     }); 
