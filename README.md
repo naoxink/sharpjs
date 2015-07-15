@@ -22,3 +22,5 @@ Util library with basic functions. Everybody is a little bit lazy :)
 |merge| `sharp.merge(obj1, obj2)` |
 |escapeHTML| `sharp.escapeHTML('<b>Hi!</b>')` |
 |fade| `sharp.fade('#someDiv', 2000, 'in')` |
+|map| `sharp.map([1, 2, 3], function(e){ return e*e; })` |
+|select| `sharp.select('.myClass')` |
