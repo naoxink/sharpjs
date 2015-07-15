@@ -3,13 +3,13 @@ Util library with basic functions. Everybody is a little bit lazy :)
 
 # Methods
 
-|Method|Basic Call|
-| --- | --- |
-|microtime| `sharp.microtime()` |
-|today| `sharp.today()` |
-|random| `sharp.random(1, 5)` |
-|trim| `sharp.trim(' hello  ')` |
-|inArray| `sharp.inArray('apple', ['lemon', 'orange', 'apple'])` |
+|Method|Basic Call|Description
+| --- | --- | --- |
+|microtime| `sharp.microtime()` | Returns microtime
+|today| `sharp.today()` | Returns a `String` formatted date
+|random| `sharp.random(1, 5)` | Returns a random number between range
+|trim| `sharp.trim(' hello  ')` | Returns the trimmed `String`
+|inArray| `sharp.inArray('apple', ['lemon', 'orange', 'apple'])` | Returns true if exists and false if not
 |isBoolean| `sharp.isBoolean(myVar)` |
 |isString| `sharp.isString(myVar)` |
 |isObject| `sharp.isObject(myVar)` |
