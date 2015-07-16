@@ -10,17 +10,17 @@ Util library with basic functions. Everybody is a little bit lazy :)
 |random| `sharp.random(1, 5)` | Returns a random number between range
 |trim| `sharp.trim(' hello  ')` | Returns the trimmed `String`
 |inArray| `sharp.inArray('apple', ['lemon', 'orange', 'apple'])` | Returns true if exists and false if not
-|isBoolean| `sharp.isBoolean(myVar)` |
-|isString| `sharp.isString(myVar)` |
-|isObject| `sharp.isObject(myVar)` |
-|isNull| `sharp.isNull(myVar)` |
-|escape| `sharp.escape(myText)` |
-|stripTags| `sharp.stripTags(myText)` |
-|capitalize| `sharp.capitalize(myText)` |
-|dump| `sharp.dump(myArray)` |
-|functionExists| `sharp.functionExists('myFunction')` |
-|merge| `sharp.merge(obj1, obj2)` |
-|escapeHTML| `sharp.escapeHTML('<b>Hi!</b>')` |
-|fade| `sharp.fade('#someDiv', 2000, 'in')` |
-|map| `sharp.map([1, 2, 3], function(e){ return e*e; })` |
-|select| `sharp.select('.myClass')` |
+|isBoolean| `sharp.isBoolean(myVar)` | Checks if a variable is boolean
+|isString| `sharp.isString(myVar)` | Checks if a variable is string
+|isObject| `sharp.isObject(myVar)` | Checks if a variable is object
+|isNull| `sharp.isNull(myVar)` | Checks if a variable is null
+|escape| `sharp.escape(myText)` | Replace sensible characters
+|stripTags| `sharp.stripTags(myText)` | Strips all HTML tags (allowed tags in the second parameter)
+|capitalize| `sharp.capitalize(myText)` | Capitalizes a string
+|dump| `sharp.dump(myArray)` | Similar to `var_dump` from PHP
+|functionExists| `sharp.functionExists('myFunction')` | Checks if a function exists
+|merge| `sharp.merge(obj1, obj2)` | Merges two objects
+|escapeHTML| `sharp.escapeHTML('<b>Hi!</b>')` | Escapes HTML characters (Ex: `<`)
+|fade| `sharp.fade('#someDiv', 2000, 'in')` | Fade selected elements
+|map| `sharp.map([1, 2, 3], function(e){ return e*e; })` | Map an array
+|select| `sharp.select('.myClass')` | Selection of DOM elements
