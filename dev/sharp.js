@@ -211,10 +211,10 @@
     }
   } // End this.select
   
-  this.diffDays: function(date1, date2){
-		d1 = date1.getTime() / 86400000;
-		d2 = date2.getTime() / 86400000;
-		return parseInt(d1 - d2);
-	} // End this.diffDays
+  this.diffDays = function(date1, date2){
+	d1 = date1.getTime() / 86400000;
+	d2 = date2.getTime() / 86400000;
+	return parseInt(d1 - d2);
+  } // End this.diffDays
 
 }());
