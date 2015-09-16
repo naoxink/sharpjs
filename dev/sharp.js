@@ -216,5 +216,27 @@
 	d2 = date2.getTime() / 86400000;
 	return parseInt(d1 - d2);
   } // End this.diffDays
+  
+  this.uniqueArray = function(_arr){
+	var r = [  ]
+	for(var i = 0; i < _arr.length; i++){ if(r.indexOf(_arr[i]) === -1) r.push(_arr[i]) }
+	return r
+  } // End this.uniqueArray
+  
+  this.highlight = function(text, words){
+	var _applyHighlight = function(str, search){
+	  return str.replace(new RegExp('(' + search + ')', 'ig'), function(w){
+		return '<span class="resaltado">' + w + '</span>'
+	  })
+	}
+	if(typeof words === 'string'){
+		words = words.split(' ')
+	}
+	words = this.uniqueArray(words);
+	for(var i = 0; i < words.length; i++){
+	  text = _applyHighlight(text, words[i]);
+	}
+	return text
+  } // End this.highlight
 
 }());
