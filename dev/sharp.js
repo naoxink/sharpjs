@@ -238,5 +238,12 @@
 	}
 	return text
   } // End this.highlight
+  
+  this.size = function(object){
+	var size = 0
+	var k
+	for (k in object) if (object.hasOwnProperty(k)) size++
+	return size
+  } // End this.size
 
 }());
