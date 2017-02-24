@@ -24,3 +24,9 @@ Util library with basic functions. Everybody is a little bit lazy :)
 |fade| `sharp.fade('#someDiv', 2000, 'in')` | Fade selected elements
 |map| `sharp.map([1, 2, 3], function(e){ return e*e; })` | Map an array
 |select| `sharp.select('.myClass')` | Selection of DOM elements
+|diffDays| `sharp.diffDays(date1, date2)` | Difference in days between two dates
+|uniqueArray| `sharp.uniqueArray(myArray)` | Remove duplicate entries in an array
+|highlight| `sharp.highlight(text, words)` | Highlights words in a text
+|size| `sharp.size(object)` | Size of an object
+|cloneObject| `sharp.cloneObject(object)` | Clones an object
+|htmlentities| `sharp.htmlentities(text)` | PHP htmlentities like
