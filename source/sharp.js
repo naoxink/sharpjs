@@ -257,3 +257,7 @@ Sharp.cloneObject = function(object){
 	}
 	return cloned
 } // End cloneObject
+
+Sharp.htmlentities = function(str){
+	return (str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
